@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>멀티미디어공학과 1391019 신유정</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+            list-style: none;
+        }
+
+    </style>
+
+    <style>
+        .pull-left{float: left;}
+        .pull-right{float: right;}
+    </style>
+
+    <style>
+        body{
+            width: 960px; margin: 0 auto;
+            background: blanchedalmond;
+        }
+        #page-wrapper{
+            background: white;
+            margin: 40px 0; padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px;
+        }
+    </style>
+
+    <style>
+        #main-header{padding: 40px 50px;}
+        .master-title{
+            font-size: 40px;
+            color: bisque;
+        }
+        .master-description{
+            font-size: 24px;
+            font-weight: 500;
+            color: gray;
+        }
+    </style>
+
+    <style>
+        #main-navigation{
+            border-top: 1px solid coral;
+            border-bottom: 1px solid coral;
+            margin-bottom: 20px;
+            height: 40px;
+        }
+
+        .outer-menu-item{
+            float: left;
+            position:relative;
+            list-style: none;
+        }
+
+        .outer-menu-item:hover{
+            background: black;
+            color: white;
+        }
+
+        .menu-title{
+            display: block;
+            height:30px; line-height: 30px;
+            text-align: center;
+            padding: 5px 20px;
+        }
+
+        .inner-menu{
+            position:absolute;
+            top:40px; left: 0;
+            width:100%;
+
+            background: white;
+            box-shadow: 0 2px 6px ;
+            z-index: 1000;
+
+            text-align: center;
+        }
+
+        .inner-menu-item>a{
+            display: block;
+            padding: 5px 10px;
+            color: black;
+        }
+
+        .inner-menu-item>a:hover{
+            background: black;
+            color: white;
+        }
+    </style>
+
+    <style>
+        #content{overflow: hidden;}
+        #main-section{
+            float: left;
+            width:710px;
+        }
+        #main-aside{
+            float: right;
+            width:200px;
+        }
+    </style>
+
+    <style>
+        th{ background: blanchedalmond;
+            color : black;
+        }
+
+        td{ background: blanchedalmond;
+        color: coral}
+    </style>
+
+    <style>
+        .aside-list{
+            padding: 10px 0 30px 0;
+        }
+        .aside-list>h3 {
+            font-size: 25px;
+            font-weight: 600;
+        }
+        .aside-list li a{
+            margin-left: 8px;
+            font-size: 20px;
+            color: burlywood;
+        }
+    </style>
+
+    <style>
+        p{background: blanchedalmond;
+        color: coral;
+        font-size: 20px}
+    </style>
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <header id="main-header">
+        <h1 class="master-title">웹프로그래밍</h1>
+        <h2 class="master-description">한성대학교 멀티미디어공학과 1391019 신유정</h2>
+        </header>
+
+        <nav id="main-navigation">
+        <div class="pull-left">
+            <ul class="outer-menu">
+
+                <li class="outer-menu-item">
+                    <a href="#alpha"> <span class="menu-title">자기소개</span></a>
+                </li>
+
+                <li class="outer-menu-item">
+                    <a href="#beta"><span class="menu-title">2016-1 시간표</span></a>
+                </li>
+
+                <li class="outer-menu-item">
+                    <a href="#gamma"><span class="menu-title">한성대학교</span></a>
+                </li>
+
+                <li class="outer-menu-item">
+                    <a href="#spring"><span class="menu-title">봄봄봄</span></a>
+                </li>
+            </ul>
+        </div>
+
+            <div class="pull-right">
+                <div class="search-bar">
+                    <form>
+                        <input type="text" class="input-search"/>
+                        <input type="submit" class="input-search-submit" value="검색"/>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div id="content">
+            <section id="main-section">
+                <div>
+                <h3 id="alpha">자기소개</h3>
+                    <p >
+                        이름 : 신유정 <br/>
+                        학번 : 1391019 <br/>
+                        전공 : 멀티미디어공학과 <br/>
+                        생년월일 : 1994.12.05 <br/>
+                        혈액형 : B형 <br/>
+                        거주지 : 경기도 부천 <br/>
+                    </p>
+                    <br/>
+
+                    <h3 id="beta">2016-1 시간표</h3>
+                    <table border="1">
+                        <tr>
+                            <th colspan="7">2016-1 시간표</th>
+                        </tr>
+                        <tr><th>주간</th>
+                            <th>월요일</th>
+                            <th>화요일</th>
+                            <th>수요일</th>
+                            <th>목요일</th>
+                            <th>금요일</th>
+                            <th>토요일</th></tr>
+
+                        <tr>
+                            <th>1교시 (9:00)</th>
+                            <td></td>
+                            <td rowspan="2">웹<br/>프로그래밍</td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="3">디지털마케팅</td>
+                            <td rowspan="4">캡스톤디자인</td>
+                        </tr>
+
+                        <tr>
+                            <th>2교시 (10:00)</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th>3교시 (11:00)</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th>4교시 (12:00)</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>웹프로그래밍</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>5교시 (13:00)</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2">마케팅원론</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>6교시 (14:00)</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>7교시 (15:00)</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>마케팅원론</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>8교시 (16:00)</th>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="2">호텔경영의 이해</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>9교시 (17:00)</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>야간1교시 (18:00)</th>
+                            <td></td>
+                            <td></td>
+                            <td rowspan="3">CRM 전략개발</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>야간2교시 (19:00)</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>야간3교시 (20:00)</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <br/>
+
+                <div>
+                    <h3 id="gamma">한성대학교</h3>
+                    <img src="한성대학교.JPG"/>
+                    <br/>
+                    <h4><a href="http://www.hansung.ac.kr">한성대학교 바로가기</a></h4>
+                    <br/>
+                    <p>4호선 한성대 입구역<br/><br/>
+                        마을버스 : 한성대입구역 2번 출구->02번 마을버스 이용(5분거리)<br/>
+                        도보 : 한성대입구역 2번 출구 -> 도보 10분 ~ 15분 거리<br/>
+                        스쿨버스 : 한성대입구역 1,2번 출구 <br/>
+                    </p>
+                    <br/>
+                </div>
+
+            <div>
+                <h3 id="spring">봄봄봄</h3>
+                <img src="봄봄봄.JPG"/>
+                <br>
+            </div>
+            </section>
+
+            <aside id="main-aside">
+                <div class="aside-list">
+                    <h3>즐겨찾기</h3>
+                    <ul>
+                        <li><a href="http://www.hansung.ac.kr">한성대학교</a></li>
+                        <li><a href="http://www.naver.co.kr">네이버</a></li>
+                        <li><a href="http://www.gmail.com">구글</a></li>
+                        <li><a href="http://www.bugs.co.kr">벅스</a></li>
+                    </ul>
+            </div>
+                <div class="aside-list">
+                    <h3>BGM</h3>
+                    <audio src="벚꽃엔딩.mp3"controls="controls" autoplay="autoplay" loop="loop"></audio>
+                </div>
+            </aside>
+        </div>
+
+        <footer id="main-footer">
+        <a href="#">Created By Yujeong Shin</a>
+        </footer>
+    </div>
+
+</body>
+</html>
