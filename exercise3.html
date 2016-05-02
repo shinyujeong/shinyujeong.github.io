@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +8,8 @@
 </head>
 <body>
 <div>
-<input type="radio" name="view" checked>테이블
-<input type="radio" name="view">목록
+    <input type="radio" name="view" checked>테이블
+    <input type="radio" name="view">목록
 </div>
 <div id="view_area">
 </div>
@@ -38,11 +40,14 @@
             }
             html += '</table>';
         } else {
-            html += '<ul>';// TODO: 목록을 선택했을때 보여주기 위한 코드
-            for (var i = 0; i< data.length; i++){
+            html +=  '<ul>';
+            for (var i = 0; i <data.length; i++) {
                 html += '<li>' + data[i].name + ' : ' + data[i].type + '</li>';
             }
             html += '</ul>';
+            // TODO: 목록을 선택했을때 보여주기 위한 코드
+
+            // -----
         }
 
         document.getElementById('view_area').innerHTML = html;
@@ -55,18 +60,19 @@
     document.getElementById('add').onclick = function () {
         var name_val = document.getElementById('name').value;
         var type_val = document.getElementById('type').value;
-     
-        for (var i=0; i<data.length; i++){
-            if(data[i].name == name_val){
-              alert('동일한 이름이 존재합니다!');
-              
-              return;
-              }
-         }// TODO: 동일한 이름이 존재하면 추가되지 않도록 하는 코드를 작성.
+        var t=0;
+        for(var l=0; l<data.length; l++){
+            if (data[l].name == name_val){
+                t=1;
+                alert("이미 같은 이름이 있습니다.")
+            }
+        }
+        // TODO: 동일한 이름이 존재하면 추가되지 않도록 하는 코드를 작성.
 
-      
-        data[data.length] = {name: name_val, type: type_val};
-
+        // -----
+        if (t!=1){
+            data[data.length] = {name: name_val, type: type_val};
+        }
         radio_changed();
     };
 
